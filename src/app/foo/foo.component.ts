@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { THING } from '../../tokens';
+import { THING } from '../tokens';
 
 @Component({
   selector: 'app-foo',

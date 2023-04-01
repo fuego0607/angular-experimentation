@@ -1,23 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { THING } from '../tokens';
-import { BarComponent } from './bar/bar.component';
-import { FooComponent } from './foo/foo.component';
 
 const routes: Routes = [
   {
     path: 'foo',
-    component: FooComponent,
-    providers: [
-      { provide: THING, useValue: 'Woohoo' }
-    ]
+    loadChildren: () => import('./foo/foo.module').then((m) => m.FooModule)
   },
   {
     path: 'bar',
-    component: BarComponent,
-    providers: [
-      { provide: THING, useValue: 'OMG' }
-    ]
+    loadChildren: () => import('./bar/bar.module').then((m) => m.BarModule)
   }
 ];
 
