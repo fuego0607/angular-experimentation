@@ -1,4 +1,11 @@
+<h2>Router Outlet</h2>
 <a routerLink="/foo">Foo</a>
 <br>
 <a routerLink="/bar">Bar</a>
 <router-outlet></router-outlet>
+<br>
+<h2>Dynamic Creation</h2>
+<button (click)="createFoo()">Create Foo</button>
+<br>
+<button (click)="createBar()">Create Bar</button>
+<ng-container #placeholder></ng-container>
